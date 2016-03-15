@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Last Time Since</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_name">Activity Name</string>
+    <string name="last_time_since">Last Time Since</string>
+    <string name="no_activities">No Activities</string>
+    <string name="title">Title</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="create_new_activity">Create New Activity</string>
+    <string name="cannot_save_activity">Cannot save activity. Please check information</string>
+    <string name="not_saved_title">Not Saved</string>
+</resources>

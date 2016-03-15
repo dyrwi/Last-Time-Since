@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="md_keylines">16dp</dimen>
+    <dimen name="tile_padding">8dp</dimen>
+    <dimen name="item_layout_padding">8dp</dimen>
+
+    <!--Text -->
+    <dimen name="name_header">18sp</dimen>
+    <dimen name="name_subheader">14sp</dimen>
+
+    <!--Menu Item -->
+    <dimen name="menu_item_size">16</dimen>
+</resources>
