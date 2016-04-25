@@ -1,5 +1,4 @@
 # Last Time Since
-
 Last Time Since is an app where you can track the last time since you did something.
 When was the last time you met with your best friend?
 Saw a movie at the theatre?
@@ -9,6 +8,17 @@ With this app, you can keep track of those events in your life.
 
 # Screenshots
 ![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/main_menu.png "Main Menu")
-![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/main_menu.png "Main Menu")
+![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/create_new_activity.png "Create New Activity")
+![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/event_list.png "Event List")
+![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/create_new_event.png "Create New Event")
+![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/choose_color.png "Choose Color")
+
+# Credits
+Big thanks to the following for their help in creating this app.
+
+ORMLite: https://github.com/j256/ormlite-android <br />
+EventBus: https://github.com/greenrobot/EventBus <br />
+AndroidViewAnimations: https://github.com/daimajia/AndroidViewAnimations <br />
+Android Iconics: https://github.com/mikepenz/Android-Iconics <br />
 
 
