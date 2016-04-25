@@ -12,5 +12,9 @@
     <dimen name="name_subheader">14sp</dimen>
 
     <!--Menu Item -->
-    <dimen name="menu_item_size">16</dimen>
+    <dimen name="menu_item_size">16dp</dimen>
+    <dimen name="activity_view_header">256dp</dimen>
+    <dimen name="activity_details_header">64dp</dimen>
+    <dimen name="add_event_layout_size">64dp</dimen>
+    <dimen name="double_event_layout_size">128dp</dimen>
 </resources>

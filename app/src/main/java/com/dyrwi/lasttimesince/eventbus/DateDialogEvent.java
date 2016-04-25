@@ -6,7 +6,7 @@ package com.dyrwi.lasttimesince.eventbus;
  * Created for use with EventBus.
  * This is used fo the DateDialogFragment file.
  */
-public class DateDialogEvent {
+public class DateDialogEvent extends BaseEvent {
     int year;
     int monthOfYear;
     int dayOfMonth;

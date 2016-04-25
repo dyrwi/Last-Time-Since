@@ -6,7 +6,7 @@ package com.dyrwi.lasttimesince.eventbus;
  * Created for EventBus
  * For use with the TimeDialogFragment class.
  */
-public class TimeDialogEvent {
+public class TimeDialogEvent extends BaseEvent{
     private int hourOfDay;
     private int minute;
 

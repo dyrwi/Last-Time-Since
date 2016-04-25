@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.CreateActivity">
+    tools:context=".activities.CreateEditActivity">
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollView"

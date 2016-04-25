@@ -9,22 +9,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity
-            android:name=".activities.MainActivity"
-            android:label="@string/app_name"></activity>
-        <activity
-            android:name=".activities.ListViewActivity"
-            android:label="@string/app_name">
 
-        </activity>
-        <activity
-            android:name=".activities.CreateActivity"
-            android:label="@string/app_name">
+        <activity android:name=".activities.NewListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".activities.ListViewActivity"/>
+        <activity android:name=".activities.CreateEditActivity"/>
+        <activity android:name=".activities.ViewActivity"/>
+        <activity android:name=".activities.CreateEditEvent"/>
+        <activity android:name=".activities.ColorPickerActivity"/>
+
+        <service android:name="com.dyrwi.lasttimesince.services.LoadRecentEventsService"></service>
+
     </application>
 
 </manifest>

@@ -10,4 +10,21 @@
     <string name="create_new_activity">Create New Activity</string>
     <string name="cannot_save_activity">Cannot save activity. Please check information</string>
     <string name="not_saved_title">Not Saved</string>
+    <string name="no_item_in_list">There are currently no items in the list. If you want to add some, please use the (+) symbol found on this page.</string>
+    <string name="create_new_event">Create New Event</string>
+    <string name="add_event_for">Add event for</string>
+    <string name="cannot_save_event">Cannot save event</string>
+    <string name="event_name">Event Name</string>
+    <string name="no_events">No Events</string>
+    <string name="add_event">Add Event</string>
+    <string name="create_activity">Create Activity</string>
+    <string name="icon_color">Icon Color</string>
+    <string name="choose_color">Choose Icon Color</string>
+    <string name="choose_icon_color">Choose Icon Color</string>
+    <string name="OK">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="set_to_date">Set the date as title</string>
+    <string name="name">Name</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="edit_activity">Edit Activity</string>
 </resources>

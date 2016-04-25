@@ -2,12 +2,16 @@ package com.dyrwi.lasttimesince.repo.implementations;
 
 import android.util.Log;
 
-import com.dyrwi.lasttimesince.repo.models.Activity;
 import com.dyrwi.lasttimesince.repo.DatabaseHelper;
+import com.dyrwi.lasttimesince.repo.JodaDatabaseHelper;
+import com.dyrwi.lasttimesince.repo.models.Activity;
 import com.dyrwi.lasttimesince.repo.models.BaseEntity;
+import com.dyrwi.lasttimesince.repo.models.JodaActivity;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
+
+import org.joda.time.LocalDateTime;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -16,13 +20,13 @@ import java.util.List;
 /**
  * Created by Ben on 03-Mar-16.
  */
-public class ActivityImpl implements Implementation<Activity> {
+public class JodaActivityImpl implements JodaImplementation<JodaActivity> {
     private String TAG = this.getClass().toString();
-    Dao<Activity, String> activityDao;
+    Dao<JodaActivity, String> activityDao;
 
-    public ActivityImpl(DatabaseHelper db) {
+    public JodaActivityImpl(JodaDatabaseHelper db) {
         try {
-            activityDao = db.getActivityDao();
+            activityDao = db.getJodaActivityDao();
         } catch (SQLException e) {
             Log.e(TAG, "Error retreiving event dao");
             e.printStackTrace();
@@ -30,7 +34,7 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public int createOrUpdate(Activity activity) {
+    public int createOrUpdate(JodaActivity activity) {
         if (findByID(activity.getId()) != null) {
             update(activity);
         } else {
@@ -39,7 +43,7 @@ public class ActivityImpl implements Implementation<Activity> {
         return 0;
     }
 
-    private int create(Activity activity) {
+    private int create(JodaActivity activity) {
         try {
             return activityDao.create(activity);
         } catch (SQLException e) {
@@ -49,7 +53,7 @@ public class ActivityImpl implements Implementation<Activity> {
         return 0;
     }
 
-    private int update(Activity activity) {
+    private int update(JodaActivity activity) {
         try {
             return activityDao.update(activity);
         } catch (SQLException e) {
@@ -60,7 +64,7 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public int delete(Activity activity) {
+    public int delete(JodaActivity activity) {
         try {
             return activityDao.delete(activity);
         } catch (SQLException e) {
@@ -71,11 +75,11 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public Activity findByID(String id) {
+    public JodaActivity findByID(String id) {
         try {
-            QueryBuilder<Activity, String> qb = activityDao.queryBuilder();
+            QueryBuilder<JodaActivity, String> qb = activityDao.queryBuilder();
             qb.where().eq(BaseEntity.ID, id);
-            PreparedQuery<Activity> pq = qb.prepare();
+            PreparedQuery<JodaActivity> pq = qb.prepare();
             return activityDao.queryForFirst(pq);
         } catch (SQLException e) {
             Log.e(TAG, "Error find by id for id: " + id);
@@ -85,25 +89,25 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public Activity findByID(long id) {
+    public JodaActivity findByID(long id) {
         try {
-            QueryBuilder<Activity, String> qb = activityDao.queryBuilder();
+            QueryBuilder<JodaActivity, String> qb = activityDao.queryBuilder();
             qb.where().eq(BaseEntity.ID, id);
-            PreparedQuery<Activity> pq = qb.prepare();
+            PreparedQuery<JodaActivity> pq = qb.prepare();
             return activityDao.queryForFirst(pq);
         } catch (SQLException e) {
             Log.e(TAG, "Error find by id for id: " + id);
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
-    public List<Activity> findByDateCreated(Date dateCreated) {
+    public List<JodaActivity> findByDateCreated(LocalDateTime dateCreated) {
         try {
-            QueryBuilder<Activity, String> qb = activityDao.queryBuilder();
+            QueryBuilder<JodaActivity, String> qb = activityDao.queryBuilder();
             qb.where().eq(BaseEntity.DATE_CREATED, dateCreated);
-            PreparedQuery<Activity> pq = qb.prepare();
+            PreparedQuery<JodaActivity> pq = qb.prepare();
             return activityDao.query(pq);
         } catch (SQLException e) {
             Log.e(TAG, "Error finding list for date: " + dateCreated.toString());
@@ -113,11 +117,11 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public List<Activity> findByDateModified(Date dateModified) {
+    public List<JodaActivity> findByDateModified(LocalDateTime dateModified) {
         try {
-            QueryBuilder<Activity, String> qb = activityDao.queryBuilder();
+            QueryBuilder<JodaActivity, String> qb = activityDao.queryBuilder();
             qb.where().eq(BaseEntity.DATE_MODIFIED, dateModified);
-            PreparedQuery<Activity> pq = qb.prepare();
+            PreparedQuery<JodaActivity> pq = qb.prepare();
             return activityDao.query(pq);
         } catch (SQLException e) {
             Log.e(TAG, "Error finding list for date: " + dateModified.toString());
@@ -127,7 +131,7 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public List<Activity> getAll() {
+    public List<JodaActivity> getAll() {
         try {
             return activityDao.queryForAll();
         } catch (SQLException e) {
@@ -138,7 +142,7 @@ public class ActivityImpl implements Implementation<Activity> {
     }
 
     @Override
-    public Activity get(Activity activity) {
+    public JodaActivity get(JodaActivity activity) {
         try {
             return activityDao.queryForSameId(activity);
         } catch (SQLException e) {
@@ -150,13 +154,13 @@ public class ActivityImpl implements Implementation<Activity> {
 
     @Override
     public void deleteAll() {
-        for (Activity e : getAll()) {
+        for (JodaActivity e : getAll()) {
             delete(e);
         }
     }
 
-    public void createFromList(List<Activity> activities) {
-        for (Activity a : activities) {
+    public void createFromList(List<JodaActivity> activities) {
+        for (JodaActivity a : activities) {
             create(a);
         }
     }

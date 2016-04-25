@@ -1,14 +1,11 @@
 package com.dyrwi.lasttimesince.fragments;
 
-import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.widget.DatePicker;
 import android.widget.TimePicker;
 
-import com.dyrwi.lasttimesince.eventbus.DateDialogEvent;
 import com.dyrwi.lasttimesince.eventbus.TimeDialogEvent;
 
 import org.greenrobot.eventbus.EventBus;
@@ -19,6 +16,9 @@ import java.util.Calendar;
  * Created by Ben on 15-Mar-16.
  */
 public class TimeDialogFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
+    public static final String HOUR_OF_DAY = "hour_of_day";
+    public static final String MINUTE_OF_HOUR = "minute";
+
     public TimeDialogFragment() {
     }
 
@@ -29,8 +29,15 @@ public class TimeDialogFragment extends DialogFragment implements TimePickerDial
         int hourOfDay = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
 
+        if (getArguments() != null) {
+            if (getArguments().containsKey(HOUR_OF_DAY))
+                hourOfDay = getArguments().getInt(HOUR_OF_DAY);
+            if (getArguments().containsKey(MINUTE_OF_HOUR))
+                minute = getArguments().getInt(MINUTE_OF_HOUR);
+        }
+
         // Create a new instance of DatePickerDialog and return it
-        return new TimePickerDialog(getActivity(), this, hourOfDay, minute, true);
+        return new TimePickerDialog(getActivity(), this, hourOfDay, minute, false);
     }
 
     @Override

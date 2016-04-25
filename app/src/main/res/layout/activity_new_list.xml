@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/coordlayout"
     tools:context=".activities.MainActivity">
 
     <include layout="@layout/standard_toolbar"/>
 
     <LinearLayout
-        android:id="@+id/empty_list_view"
+        android:id="@+id/empty_view"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:text="@string/no_item_in_list"
+            android:text="@string/no_activities"
             android:textSize="16sp"
             android:paddingTop="4dp"
             android:paddingBottom="8dp"
@@ -27,11 +28,11 @@
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <com.dyrwi.lasttimesince.util.RecyclerViewEmptySupport
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/recycler_view_empty_support"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="match_parent"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

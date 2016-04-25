@@ -10,6 +10,8 @@ import net.danlew.android.joda.JodaTimeAndroid;
  */
 public class MyApplication extends Application {
     private static Context context;
+    public static final int MENU_ICON_SIZE = 16;
+
     @Override
     public void onCreate() {
         super.onCreate();
