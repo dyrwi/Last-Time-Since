@@ -9,4 +9,6 @@ With this app, you can keep track of those events in your life.
 
 # Screenshots
 ![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/main_menu.png "Main Menu")
+![alt text](https://github.com/dyrwi/Last-Time-Since/blob/InitialCommit/screenshots/resized/main_menu.png "Main Menu")
+
 
