@@ -16,9 +16,9 @@ With this app, you can keep track of those events in your life.
 # Credits
 Big thanks to the following for their help in creating this app.
 
-ORMLite: https://github.com/j256/ormlite-android <br />
-EventBus: https://github.com/greenrobot/EventBus <br />
-AndroidViewAnimations: https://github.com/daimajia/AndroidViewAnimations <br />
-Android Iconics: https://github.com/mikepenz/Android-Iconics <br />
+<b>ORMLite:</b> https://github.com/j256/ormlite-android <br />
+<b>EventBus:</b> https://github.com/greenrobot/EventBus <br />
+<b>AndroidViewAnimations:</b> https://github.com/daimajia/AndroidViewAnimations <br />
+<b>Android Iconics:</b> https://github.com/mikepenz/Android-Iconics <br />
 
 
